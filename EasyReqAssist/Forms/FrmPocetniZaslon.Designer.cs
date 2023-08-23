@@ -58,6 +58,7 @@
             this.btnNoviZahtjev.TabIndex = 1;
             this.btnNoviZahtjev.Text = "Novi Zahtjev";
             this.btnNoviZahtjev.UseVisualStyleBackColor = true;
+            this.btnNoviZahtjev.Click += new System.EventHandler(this.btnNoviZahtjev_Click);
             // 
             // dataGridView1
             // 

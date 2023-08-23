@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyReqAssist.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace EasyReqAssist
         public FrmPocetniZaslon()
         {
             InitializeComponent();
+        }
+
+        private void btnNoviZahtjev_Click(object sender, EventArgs e)
+        {
+            FrmNoviZahtjev noviZahtjev = new FrmNoviZahtjev();
+            noviZahtjev.ShowDialog();
         }
     }
 }
