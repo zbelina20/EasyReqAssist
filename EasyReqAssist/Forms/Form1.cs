@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EasyReqAssist
 {
-    public partial class Form1 : Form
+    public partial class FrmPocetniZaslon : Form
     {
-        public Form1()
+        public FrmPocetniZaslon()
         {
             InitializeComponent();
         }
