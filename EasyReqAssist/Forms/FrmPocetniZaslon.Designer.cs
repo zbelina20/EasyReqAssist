@@ -30,11 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnNoviZahtjev = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvZahtjevi = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnObrisiZahtjev = new System.Windows.Forms.Button();
             this.btnDetaljiZahtjeva = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSpremiUDatoteku = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +45,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(-9, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(878, 49);
+            this.label1.Size = new System.Drawing.Size(1055, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dobrodošli u EasyReqAssist - Vaša platforma za zahtjeve!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -52,21 +53,21 @@
             // btnNoviZahtjev
             // 
             this.btnNoviZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNoviZahtjev.Location = new System.Drawing.Point(35, 159);
+            this.btnNoviZahtjev.Location = new System.Drawing.Point(37, 120);
             this.btnNoviZahtjev.Name = "btnNoviZahtjev";
             this.btnNoviZahtjev.Size = new System.Drawing.Size(125, 75);
             this.btnNoviZahtjev.TabIndex = 1;
-            this.btnNoviZahtjev.Text = "Novi Zahtjev";
+            this.btnNoviZahtjev.Text = "Novi zahtjev";
             this.btnNoviZahtjev.UseVisualStyleBackColor = true;
             this.btnNoviZahtjev.Click += new System.EventHandler(this.btnNoviZahtjev_Click);
             // 
-            // dataGridView1
+            // dgvZahtjevi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(187, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(655, 319);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvZahtjevi.Location = new System.Drawing.Point(187, 120);
+            this.dgvZahtjevi.Name = "dgvZahtjevi";
+            this.dgvZahtjevi.Size = new System.Drawing.Size(837, 319);
+            this.dgvZahtjevi.TabIndex = 2;
             // 
             // label2
             // 
@@ -80,39 +81,51 @@
             // btnObrisiZahtjev
             // 
             this.btnObrisiZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiZahtjev.Location = new System.Drawing.Point(35, 240);
+            this.btnObrisiZahtjev.Location = new System.Drawing.Point(37, 283);
             this.btnObrisiZahtjev.Name = "btnObrisiZahtjev";
             this.btnObrisiZahtjev.Size = new System.Drawing.Size(125, 75);
             this.btnObrisiZahtjev.TabIndex = 4;
-            this.btnObrisiZahtjev.Text = "Obriši Zahtjev";
+            this.btnObrisiZahtjev.Text = "Obriši zahtjev";
             this.btnObrisiZahtjev.UseVisualStyleBackColor = true;
             // 
             // btnDetaljiZahtjeva
             // 
             this.btnDetaljiZahtjeva.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetaljiZahtjeva.Location = new System.Drawing.Point(35, 321);
+            this.btnDetaljiZahtjeva.Location = new System.Drawing.Point(37, 201);
             this.btnDetaljiZahtjeva.Name = "btnDetaljiZahtjeva";
             this.btnDetaljiZahtjeva.Size = new System.Drawing.Size(125, 75);
             this.btnDetaljiZahtjeva.TabIndex = 5;
-            this.btnDetaljiZahtjeva.Text = "Detalji Zahtjeva";
+            this.btnDetaljiZahtjeva.Text = "Detalji zahtjeva";
             this.btnDetaljiZahtjeva.UseVisualStyleBackColor = true;
+            // 
+            // btnSpremiUDatoteku
+            // 
+            this.btnSpremiUDatoteku.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpremiUDatoteku.Location = new System.Drawing.Point(37, 364);
+            this.btnSpremiUDatoteku.Name = "btnSpremiUDatoteku";
+            this.btnSpremiUDatoteku.Size = new System.Drawing.Size(125, 75);
+            this.btnSpremiUDatoteku.TabIndex = 6;
+            this.btnSpremiUDatoteku.Text = "Spremi u datoteku";
+            this.btnSpremiUDatoteku.UseVisualStyleBackColor = true;
+            this.btnSpremiUDatoteku.Click += new System.EventHandler(this.btnSpremiUDatoteku_Click);
             // 
             // FrmPocetniZaslon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 461);
+            this.ClientSize = new System.Drawing.Size(1043, 461);
+            this.Controls.Add(this.btnSpremiUDatoteku);
             this.Controls.Add(this.btnDetaljiZahtjeva);
             this.Controls.Add(this.btnObrisiZahtjev);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvZahtjevi);
             this.Controls.Add(this.btnNoviZahtjev);
             this.Controls.Add(this.label1);
             this.Name = "FrmPocetniZaslon";
             this.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EasyReqAssist";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,10 +134,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNoviZahtjev;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvZahtjevi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnObrisiZahtjev;
         private System.Windows.Forms.Button btnDetaljiZahtjeva;
+        private System.Windows.Forms.Button btnSpremiUDatoteku;
     }
 }
 

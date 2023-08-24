@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Requirement.cs" />
     <Compile Include="Forms\FrmPocetniZaslon.cs">
       <SubType>Form</SubType>
     </Compile>
