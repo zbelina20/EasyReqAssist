@@ -117,36 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>27, 11</value>
-  </metadata>
-  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>123, 11</value>
-  </metadata>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value>Sam zahtjev kojeg bi sustav trebao realizirati. 
-Izbjegavajte pisanje zahtjeva kao što su „Sustav će biti dizajniran da može…“ ili
-„Sustav će biti dizajniran da bude sposoban za…“, umjesto „Sustav će…“. 
-Npr.  "Sustav će omogućiti prijavu korisnika."</value>
-  </data>
-  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>555, 14</value>
-  </metadata>
-  <data name="label3.ToolTip" xml:space="preserve">
-    <value>Obrazloženje postojanja i potrebe napisanog zahtjeva.
-Npr. "Korisnik će se morati prijaviti kako bi pristupio aplikaciji 
-te se pri svakom unosom provjeravaju uneseni podatci. 
-Svaki korisnik ima svoje jedinstveno korisničko ime i lozinku."
-</value>
-  </data>
   <metadata name="toolTipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>927, 15</value>
+    <value>1011, 27</value>
   </metadata>
   <metadata name="toolTipPrioritet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>703, 14</value>
+    <value>762, 27</value>
   </metadata>
   <metadata name="toolTipNacinProvjere.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1039, 15</value>
+    <value>1134, 27</value>
   </metadata>
   <data name="label4.ToolTip" xml:space="preserve">
     <value>Postupak koji se provodi unutar aplikacije kako bi
@@ -155,42 +133,66 @@ testni scenarij ili kriterij provjere.
 Npr. Upisom ispravnih korisničkih podataka
 korisnik treba biti uspješno prijavljen u sustav i 
 spreman za rad. Ukoliko su podaci neispravni, 
-prijava u sustav je neuspješna te rad neće biti moguć.</value>
+prijava u sustav je neuspješna te rad neće biti moguć.
+</value>
   </data>
   <metadata name="toolTipVrstaZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 14</value>
+    <value>441, 27</value>
   </metadata>
   <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 11</value>
-  </metadata>
-  <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>824, 15</value>
+    <value>269, 27</value>
   </metadata>
   <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>27, 11</value>
-  </metadata>
-  <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 11</value>
-  </metadata>
-  <metadata name="toolTipVrstaZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 14</value>
-  </metadata>
-  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>555, 14</value>
-  </metadata>
-  <metadata name="toolTipPrioritet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>703, 14</value>
+    <value>32, 27</value>
   </metadata>
   <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>824, 15</value>
+    <value>895, 27</value>
+  </metadata>
+  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 27</value>
+  </metadata>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value>Sam zahtjev kojeg bi sustav trebao realizirati. 
+Izbjegavajte pisanje zahtjeva kao što su „Sustav će biti dizajniran da može…“ ili
+„Sustav će biti dizajniran da bude sposoban za…“, umjesto „Sustav će…“. 
+Npr.  "Sustav će omogućiti prijavu korisnika."
+</value>
+  </data>
+  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>603, 27</value>
+  </metadata>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value>Obrazloženje postojanja i potrebe napisanog zahtjeva.
+Npr. "Korisnik će se morati prijaviti kako bi pristupio aplikaciji 
+te se pri svakom unosom provjeravaju uneseni podatci. 
+Svaki korisnik ima svoje jedinstveno korisničko ime i lozinku."
+</value>
+  </data>
+  <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>32, 27</value>
+  </metadata>
+  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 27</value>
+  </metadata>
+  <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>269, 27</value>
+  </metadata>
+  <metadata name="toolTipVrstaZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>441, 27</value>
+  </metadata>
+  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>603, 27</value>
+  </metadata>
+  <metadata name="toolTipPrioritet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>762, 27</value>
+  </metadata>
+  <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>895, 27</value>
   </metadata>
   <metadata name="toolTipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>927, 15</value>
-  </metadata>
-  <metadata name="toolTipNacinProvjere.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1039, 15</value>
+    <value>1011, 27</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>58</value>
+    <value>55</value>
   </metadata>
 </root>

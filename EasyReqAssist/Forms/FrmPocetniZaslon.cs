@@ -15,7 +15,7 @@ namespace EasyReqAssist
 {
     public partial class FrmPocetniZaslon : Form
     {
-        private List<Requirement> listaZahtjeva = new List<Requirement>();
+        public List<Zahtjev> listaZahtjeva = new List<Zahtjev>();
         public FrmPocetniZaslon()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace EasyReqAssist
             noviZahtjev.ShowDialog();
         }
 
-        public void UcitajNoviZahtjev(Requirement requirement)
+        public void UcitajNoviZahtjev(Zahtjev requirement)
         {
             listaZahtjeva.Add(requirement);
             dgvZahtjevi.DataSource = null;
@@ -36,34 +36,69 @@ namespace EasyReqAssist
 
         private void btnSpremiUDatoteku_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Filter = "Tekstualne datoteke (*.txt)|*.txt";
-
-            if (saveDialog.ShowDialog() == DialogResult.OK)
+            if (listaZahtjeva.Count == 0)
             {
-                SpremiZahtjeveUDatoteku(saveDialog.FileName, listaZahtjeva);
-                MessageBox.Show("Zahtjevi su uspješno spremljeni!", "Spremanje završeno", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nemate zahtjeva za spremiti!", "Spremanje prekinuto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "PDF datoteke (*.pdf)|*.pdf|All files (*.*)|*.*";
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    SpremiZahtjeveUDatoteku(saveDialog.FileName, listaZahtjeva);
+                    MessageBox.Show("Zahtjevi su uspješno spremljeni!", "Spremanje završeno", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
-        private void SpremiZahtjeveUDatoteku(string nazivDatoteke, List<Requirement> listaZahtjeva)
+        private void SpremiZahtjeveUDatoteku(string nazivDatoteke, List<Zahtjev> listaZahtjeva)
         {
             using (StreamWriter writer = new StreamWriter(nazivDatoteke))
             {
-                foreach (Requirement zahtjev in listaZahtjeva)
+                foreach (Zahtjev zahtjev in listaZahtjeva)
                 {
-                    writer.WriteLine(zahtjev.ID);
-                    writer.WriteLine(zahtjev.Naziv);
-                    writer.WriteLine(zahtjev.DatumKreiranja);
-                    writer.WriteLine(zahtjev.Vrsta);
-                    writer.WriteLine(zahtjev.Obrazlozenje);
-                    writer.WriteLine(zahtjev.Prioritet);
-                    writer.WriteLine(zahtjev.Izvor);
-                    writer.WriteLine(zahtjev.Status);
-                    writer.WriteLine(zahtjev.NacinProvjere);
+                    writer.WriteLine("Identifikator: ", zahtjev.ID);
+                    writer.WriteLine("Zahtjev: ", zahtjev.NazivZahtjeva);
+                    writer.WriteLine("Datum kreiranja: ", zahtjev.DatumKreiranja);
+                    writer.WriteLine("Vrsta zahtjeva: ", zahtjev.Vrsta);
+                    writer.WriteLine("Obrazloženje: ", zahtjev.Obrazlozenje);
+                    writer.WriteLine("Prioritet: ", zahtjev.Prioritet);
+                    writer.WriteLine("Izvor: ", zahtjev.Izvor);
+                    writer.WriteLine("Status: ", zahtjev.Status);
+                    writer.WriteLine("Način provjere: ", zahtjev.NacinProvjere);
                     writer.WriteLine(); // Prazan red između svakog zahtjeva
                 }
             }
         }
+        private void btnDetaljiZahtjeva_Click(object sender, EventArgs e)
+        {
+            var odabraniZahtjev = DohvatiZahtjev();
+
+            if(dgvZahtjevi.Rows.Count == 0)
+            {
+                MessageBox.Show("Nemate napravljenih zahtjeva!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (odabraniZahtjev == null)
+            {
+                MessageBox.Show("Morate odabrati zahtjev da biste vidjeli njegove detalje!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                FrmDetaljiZahtjeva detaljiZahtjeva = new FrmDetaljiZahtjeva(odabraniZahtjev);
+                detaljiZahtjeva.ShowDialog();
+            }
+        }
+
+        private Zahtjev DohvatiZahtjev()
+        {
+            if (dgvZahtjevi.CurrentRow != null)
+            {
+                return dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            }
+            return null;
+        }
     }
+
 }

@@ -36,21 +36,32 @@ namespace EasyReqAssist.Forms
             }
             else
             {
-                Requirement noviZahtjev = new Requirement {
+                Zahtjev noviZahtjev = new Zahtjev {
                     ID = txtID.Text,
-                    Naziv = txtZahtjev.Text,
+                    NazivZahtjeva = txtZahtjev.Text,
                     DatumKreiranja = dtpDatumZahjteva.Value,
                     Vrsta = txtVrsta.Text,
                     Obrazlozenje = txtObrazlozenje.Text,
                     Prioritet = txtPrioritet.Text,
                     Izvor = txtIzvor.Text,
                     Status = txtStatus.Text,
-                    NacinProvjere = txtNacinProvjere.Text
+                    NacinProvjere = txtNacinProvjere.Text,
+                    RedniBroj = RedniBrojZahtjeva()
                 };
 
                 pocetniZaslon.UcitajNoviZahtjev(noviZahtjev);
                 Close();
             }
+        }
+
+        private int RedniBrojZahtjeva()
+        {
+            return pocetniZaslon.listaZahtjeva.Count + 1;
+        }
+
+        private void FrmNoviZahtjev_Load(object sender, EventArgs e)
+        {
+           labelZahtjev.Text += " " + (RedniBrojZahtjeva()).ToString();
         }
     }
 }
