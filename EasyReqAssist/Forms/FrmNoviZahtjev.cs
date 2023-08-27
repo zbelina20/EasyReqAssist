@@ -56,7 +56,18 @@ namespace EasyReqAssist.Forms
 
         private int RedniBrojZahtjeva()
         {
-            return pocetniZaslon.listaZahtjeva.Count + 1;
+            if(pocetniZaslon.listaZahtjeva.Count == 0)
+            {
+                return 1;
+            }
+            else if(pocetniZaslon.listaZahtjeva.Count != pocetniZaslon.listaZahtjeva.LastOrDefault().RedniBroj)
+            {
+                return pocetniZaslon.listaZahtjeva.Count - 1;
+            }
+            else
+            {
+                return pocetniZaslon.listaZahtjeva.Count + 1;
+            }
         }
 
         private void FrmNoviZahtjev_Load(object sender, EventArgs e)

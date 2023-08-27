@@ -47,7 +47,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(-9, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1236, 49);
+            this.label1.Size = new System.Drawing.Size(1280, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dobrodošli u EasyReqAssist - Vaša platforma za zahtjeve!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,7 +56,7 @@
             // 
             this.btnNoviZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNoviZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNoviZahtjev.Location = new System.Drawing.Point(37, 120);
+            this.btnNoviZahtjev.Location = new System.Drawing.Point(40, 198);
             this.btnNoviZahtjev.Name = "btnNoviZahtjev";
             this.btnNoviZahtjev.Size = new System.Drawing.Size(125, 75);
             this.btnNoviZahtjev.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZahtjevi.Location = new System.Drawing.Point(187, 120);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
-            this.dgvZahtjevi.Size = new System.Drawing.Size(992, 478);
+            this.dgvZahtjevi.Size = new System.Drawing.Size(1040, 478);
             this.dgvZahtjevi.TabIndex = 2;
             // 
             // label2
@@ -86,18 +86,19 @@
             // 
             this.btnObrisiZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnObrisiZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisiZahtjev.Location = new System.Drawing.Point(37, 283);
+            this.btnObrisiZahtjev.Location = new System.Drawing.Point(40, 361);
             this.btnObrisiZahtjev.Name = "btnObrisiZahtjev";
             this.btnObrisiZahtjev.Size = new System.Drawing.Size(125, 75);
             this.btnObrisiZahtjev.TabIndex = 4;
             this.btnObrisiZahtjev.Text = "Obriši zahtjev";
             this.btnObrisiZahtjev.UseVisualStyleBackColor = false;
+            this.btnObrisiZahtjev.Click += new System.EventHandler(this.btnObrisiZahtjev_Click);
             // 
             // btnDetaljiZahtjeva
             // 
             this.btnDetaljiZahtjeva.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDetaljiZahtjeva.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetaljiZahtjeva.Location = new System.Drawing.Point(37, 201);
+            this.btnDetaljiZahtjeva.Location = new System.Drawing.Point(40, 279);
             this.btnDetaljiZahtjeva.Name = "btnDetaljiZahtjeva";
             this.btnDetaljiZahtjeva.Size = new System.Drawing.Size(125, 75);
             this.btnDetaljiZahtjeva.TabIndex = 5;
@@ -109,7 +110,7 @@
             // 
             this.btnSpremiUDatoteku.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSpremiUDatoteku.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpremiUDatoteku.Location = new System.Drawing.Point(37, 364);
+            this.btnSpremiUDatoteku.Location = new System.Drawing.Point(40, 442);
             this.btnSpremiUDatoteku.Name = "btnSpremiUDatoteku";
             this.btnSpremiUDatoteku.Size = new System.Drawing.Size(125, 75);
             this.btnSpremiUDatoteku.TabIndex = 6;
@@ -122,9 +123,9 @@
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(-9, 628);
+            this.label3.Location = new System.Drawing.Point(-9, 623);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1236, 49);
+            this.label3.Size = new System.Drawing.Size(1280, 49);
             this.label3.TabIndex = 7;
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -133,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1224, 688);
+            this.ClientSize = new System.Drawing.Size(1266, 688);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSpremiUDatoteku);
             this.Controls.Add(this.btnDetaljiZahtjeva);

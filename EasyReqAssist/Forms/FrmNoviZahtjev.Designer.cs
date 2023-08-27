@@ -244,7 +244,6 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Oznaka";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTipZahtjev.SetToolTip(this.label9, "Test tooltip");
             // 
             // label8
             // 

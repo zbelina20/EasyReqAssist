@@ -37,8 +37,9 @@ namespace EasyReqAssist
         private void OsvjeziPopisZahtjeva()
         {
             dgvZahtjevi.DataSource = null;
+            listaZahtjeva = listaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
             dgvZahtjevi.DataSource = listaZahtjeva;
-            listaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
+            dgvZahtjevi.Refresh();
         }
 
         public void IzmijeniPostojeciZahtjev(Zahtjev izmijenjeniZahtjev)
@@ -112,6 +113,25 @@ namespace EasyReqAssist
                 return dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
             }
             return null;
+        }
+
+        private void btnObrisiZahtjev_Click(object sender, EventArgs e)
+        {
+            odabraniZahtjev = DohvatiZahtjev();
+
+            if (dgvZahtjevi.Rows.Count == 0)
+            {
+                MessageBox.Show("Nemate zahtjeva za obrisati!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (odabraniZahtjev == null)
+            {
+                MessageBox.Show("Morate odabrati zahtjev da biste ga mogli obrisati!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                listaZahtjeva.Remove(odabraniZahtjev);
+                OsvjeziPopisZahtjeva();
+            }
         }
     }
 
