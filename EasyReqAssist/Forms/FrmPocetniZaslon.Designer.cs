@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPocetniZaslon));
             this.label1 = new System.Windows.Forms.Label();
             this.btnNoviZahtjev = new System.Windows.Forms.Button();
             this.dgvZahtjevi = new System.Windows.Forms.DataGridView();
@@ -46,7 +47,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(-9, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1188, 49);
+            this.label1.Size = new System.Drawing.Size(1236, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dobrodošli u EasyReqAssist - Vaša platforma za zahtjeve!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -69,7 +70,7 @@
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZahtjevi.Location = new System.Drawing.Point(187, 120);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
-            this.dgvZahtjevi.Size = new System.Drawing.Size(942, 478);
+            this.dgvZahtjevi.Size = new System.Drawing.Size(992, 478);
             this.dgvZahtjevi.TabIndex = 2;
             // 
             // label2
@@ -123,7 +124,7 @@
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(-9, 628);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1188, 49);
+            this.label3.Size = new System.Drawing.Size(1236, 49);
             this.label3.TabIndex = 7;
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -132,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1173, 688);
+            this.ClientSize = new System.Drawing.Size(1224, 688);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSpremiUDatoteku);
             this.Controls.Add(this.btnDetaljiZahtjeva);
@@ -141,6 +142,7 @@
             this.Controls.Add(this.dgvZahtjevi);
             this.Controls.Add(this.btnNoviZahtjev);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPocetniZaslon";
             this.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

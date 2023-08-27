@@ -42,7 +42,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtIdentifikator = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtIdentifikator, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
@@ -278,16 +278,16 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipNacinProvjere.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
-            // txtID
+            // txtIdentifikator
             // 
-            this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtIdentifikator.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtID.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(322, 29);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(312, 22);
-            this.txtID.TabIndex = 1;
+            this.txtIdentifikator.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentifikator.Location = new System.Drawing.Point(322, 29);
+            this.txtIdentifikator.Name = "txtIdentifikator";
+            this.txtIdentifikator.Size = new System.Drawing.Size(312, 22);
+            this.txtIdentifikator.TabIndex = 1;
             // 
             // label11
             // 
@@ -487,6 +487,7 @@
             this.Controls.Add(this.btnSpremiZahtjev);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labelZahtjev);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNoviZahtjev";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novi zahtjev";
@@ -527,7 +528,7 @@
         private System.Windows.Forms.TextBox txtNacinProvjere;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIdentifikator;
         private System.Windows.Forms.TextBox txtPrioritet;
         private System.Windows.Forms.TextBox txtObrazlozenje;
         private System.Windows.Forms.TextBox txtVrsta;

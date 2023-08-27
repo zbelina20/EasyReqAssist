@@ -18,7 +18,7 @@ namespace EasyReqAssist.Forms
         public FrmNoviZahtjev(FrmPocetniZaslon frmPocetniZaslon)
         {
             InitializeComponent();
-            this.pocetniZaslon = frmPocetniZaslon;
+            pocetniZaslon = frmPocetniZaslon;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -28,16 +28,17 @@ namespace EasyReqAssist.Forms
 
         private void btnSpremiZahtjev_Click(object sender, EventArgs e)
         {
-            if(txtID.Text == "" || txtZahtjev.Text == "")
+            if(txtIdentifikator.Text == "" || txtZahtjev.Text == "")
             {
-                MessageBox.Show("Morate upisati identifikator i zahtjev!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtID.BackColor = Color.IndianRed;
+                MessageBox.Show("Morate upisati identifikator i zahtjev!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtIdentifikator.BackColor = Color.IndianRed;
                 txtZahtjev.BackColor = Color.IndianRed;
             }
             else
             {
                 Zahtjev noviZahtjev = new Zahtjev {
-                    ID = txtID.Text,
+                    RedniBroj = RedniBrojZahtjeva(),
+                    Identifikator = txtIdentifikator.Text,
                     NazivZahtjeva = txtZahtjev.Text,
                     DatumKreiranja = dtpDatumZahjteva.Value,
                     Vrsta = txtVrsta.Text,
@@ -45,8 +46,7 @@ namespace EasyReqAssist.Forms
                     Prioritet = txtPrioritet.Text,
                     Izvor = txtIzvor.Text,
                     Status = txtStatus.Text,
-                    NacinProvjere = txtNacinProvjere.Text,
-                    RedniBroj = RedniBrojZahtjeva()
+                    NacinProvjere = txtNacinProvjere.Text
                 };
 
                 pocetniZaslon.UcitajNoviZahtjev(noviZahtjev);

@@ -16,6 +16,7 @@ namespace EasyReqAssist
     public partial class FrmPocetniZaslon : Form
     {
         public List<Zahtjev> listaZahtjeva = new List<Zahtjev>();
+        private Zahtjev odabraniZahtjev = new Zahtjev();
         public FrmPocetniZaslon()
         {
             InitializeComponent();
@@ -27,11 +28,24 @@ namespace EasyReqAssist
             noviZahtjev.ShowDialog();
         }
 
-        public void UcitajNoviZahtjev(Zahtjev requirement)
+        public void UcitajNoviZahtjev(Zahtjev zahtjev)
         {
-            listaZahtjeva.Add(requirement);
+            listaZahtjeva.Add(zahtjev);
+            OsvjeziPopisZahtjeva();
+        }
+
+        private void OsvjeziPopisZahtjeva()
+        {
             dgvZahtjevi.DataSource = null;
             dgvZahtjevi.DataSource = listaZahtjeva;
+            listaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
+        }
+
+        public void IzmijeniPostojeciZahtjev(Zahtjev izmijenjeniZahtjev)
+        {
+            int index = listaZahtjeva.FindIndex(z => z.RedniBroj == odabraniZahtjev.RedniBroj);
+            listaZahtjeva[index] = izmijenjeniZahtjev;
+            OsvjeziPopisZahtjeva();
         }
 
         private void btnSpremiUDatoteku_Click(object sender, EventArgs e)
@@ -43,7 +57,7 @@ namespace EasyReqAssist
             else
             {
                 SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Filter = "PDF datoteke (*.pdf)|*.pdf|All files (*.*)|*.*";
+                saveDialog.Filter = "Tekstualne Datoteke | *.txt";
 
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -59,22 +73,22 @@ namespace EasyReqAssist
             {
                 foreach (Zahtjev zahtjev in listaZahtjeva)
                 {
-                    writer.WriteLine("Identifikator: ", zahtjev.ID);
-                    writer.WriteLine("Zahtjev: ", zahtjev.NazivZahtjeva);
-                    writer.WriteLine("Datum kreiranja: ", zahtjev.DatumKreiranja);
-                    writer.WriteLine("Vrsta zahtjeva: ", zahtjev.Vrsta);
-                    writer.WriteLine("Obrazloženje: ", zahtjev.Obrazlozenje);
-                    writer.WriteLine("Prioritet: ", zahtjev.Prioritet);
-                    writer.WriteLine("Izvor: ", zahtjev.Izvor);
-                    writer.WriteLine("Status: ", zahtjev.Status);
-                    writer.WriteLine("Način provjere: ", zahtjev.NacinProvjere);
+                    writer.WriteLine("Identifikator: " + zahtjev.Identifikator);
+                    writer.WriteLine("Zahtjev: " + zahtjev.NazivZahtjeva);
+                    writer.WriteLine("Datum kreiranja: " + zahtjev.DatumKreiranja);
+                    writer.WriteLine("Vrsta zahtjeva: " + zahtjev.Vrsta);
+                    writer.WriteLine("Obrazloženje: " + zahtjev.Obrazlozenje);
+                    writer.WriteLine("Prioritet: " + zahtjev.Prioritet);
+                    writer.WriteLine("Izvor: " + zahtjev.Izvor);
+                    writer.WriteLine("Status: " + zahtjev.Status);
+                    writer.WriteLine("Način provjere: " + zahtjev.NacinProvjere);
                     writer.WriteLine(); // Prazan red između svakog zahtjeva
                 }
             }
         }
         private void btnDetaljiZahtjeva_Click(object sender, EventArgs e)
         {
-            var odabraniZahtjev = DohvatiZahtjev();
+            odabraniZahtjev = DohvatiZahtjev();
 
             if(dgvZahtjevi.Rows.Count == 0)
             {
@@ -86,7 +100,7 @@ namespace EasyReqAssist
             }
             else
             {
-                FrmDetaljiZahtjeva detaljiZahtjeva = new FrmDetaljiZahtjeva(odabraniZahtjev);
+                FrmDetaljiZahtjeva detaljiZahtjeva = new FrmDetaljiZahtjeva(odabraniZahtjev, this);
                 detaljiZahtjeva.ShowDialog();
             }
         }

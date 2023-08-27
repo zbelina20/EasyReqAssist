@@ -8,7 +8,8 @@ namespace EasyReqAssist.Entities
 {
     public class Zahtjev
     {
-        public string ID { get; set; }
+        public int RedniBroj { get; set; }
+        public string Identifikator { get; set; }
         public string NazivZahtjeva { get; set; }
         public DateTime DatumKreiranja { get; set; }
         public string Vrsta { get; set; }
@@ -17,6 +18,5 @@ namespace EasyReqAssist.Entities
         public string Izvor { get; set; }
         public string Status { get; set; }
         public string NacinProvjere { get; set; }
-        public int RedniBroj { get; set; }
     }
 }
