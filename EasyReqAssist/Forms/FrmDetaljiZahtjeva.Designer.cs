@@ -71,10 +71,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 581);
+            this.label13.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 590);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(311, 13);
+            this.label13.Size = new System.Drawing.Size(319, 15);
             this.label13.TabIndex = 17;
             this.label13.Text = "*Prijeđite mišem preko atributa kako biste saznali više informacija";
             // 
