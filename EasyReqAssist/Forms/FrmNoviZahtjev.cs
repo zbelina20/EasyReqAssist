@@ -1,4 +1,5 @@
-﻿using EasyReqAssist.Entities;
+﻿using EasyReqAssist.API;
+using EasyReqAssist.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,6 +74,20 @@ namespace EasyReqAssist.Forms
         private void FrmNoviZahtjev_Load(object sender, EventArgs e)
         {
            labelZahtjev.Text += " " + (RedniBrojZahtjeva()).ToString();
+        }
+
+        private async void btnProvjeriZahtjev_Click(object sender, EventArgs e)
+        {
+            if(txtZahtjev.Text == "")
+            {
+                MessageBox.Show("Morate napisati zahtjev kako bi se mogao provjeriti!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var chatClient = new OpenAIChatClient();
+                string response = await chatClient.GetChatResponseV2(txtZahtjev.Text);
+                txtOdgovorAPIa.Text = response;
+            }
         }
     }
 }

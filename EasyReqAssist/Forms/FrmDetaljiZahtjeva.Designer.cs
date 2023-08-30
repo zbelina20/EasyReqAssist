@@ -70,6 +70,8 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(12, 590);
@@ -80,6 +82,8 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOdustani.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdustani.Location = new System.Drawing.Point(616, 554);
@@ -92,6 +96,8 @@
             // 
             // btnSpremiZahtjev
             // 
+            this.btnSpremiZahtjev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSpremiZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSpremiZahtjev.Enabled = false;
             this.btnSpremiZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +111,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -153,7 +161,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1, 330);
+            this.label12.Location = new System.Drawing.Point(1, 332);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(317, 29);
@@ -170,7 +178,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStatus.Enabled = false;
             this.txtStatus.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(322, 333);
+            this.txtStatus.Location = new System.Drawing.Point(322, 335);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(312, 23);
             this.txtStatus.TabIndex = 19;
@@ -182,7 +190,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 259);
+            this.label6.Location = new System.Drawing.Point(1, 261);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(317, 29);
@@ -200,7 +208,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNacinProvjere.Enabled = false;
             this.txtNacinProvjere.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNacinProvjere.Location = new System.Drawing.Point(322, 363);
+            this.txtNacinProvjere.Location = new System.Drawing.Point(322, 365);
             this.txtNacinProvjere.Multiline = true;
             this.txtNacinProvjere.Name = "txtNacinProvjere";
             this.txtNacinProvjere.Size = new System.Drawing.Size(312, 97);
@@ -245,7 +253,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 360);
+            this.label4.Location = new System.Drawing.Point(1, 362);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(317, 103);
@@ -273,7 +281,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1, 140);
+            this.label11.Location = new System.Drawing.Point(1, 142);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(317, 29);
@@ -293,7 +301,7 @@
             this.label10.Location = new System.Drawing.Point(1, 113);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(317, 26);
+            this.label10.Size = new System.Drawing.Size(317, 28);
             this.label10.TabIndex = 14;
             this.label10.Text = "Datum zahtjeva:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 289);
+            this.label7.Location = new System.Drawing.Point(1, 291);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(317, 40);
@@ -341,7 +349,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrioritet.Enabled = false;
             this.txtPrioritet.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrioritet.Location = new System.Drawing.Point(322, 262);
+            this.txtPrioritet.Location = new System.Drawing.Point(322, 264);
             this.txtPrioritet.Name = "txtPrioritet";
             this.txtPrioritet.Size = new System.Drawing.Size(312, 23);
             this.txtPrioritet.TabIndex = 10;
@@ -353,7 +361,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObrazlozenje.Enabled = false;
             this.txtObrazlozenje.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObrazlozenje.Location = new System.Drawing.Point(322, 173);
+            this.txtObrazlozenje.Location = new System.Drawing.Point(322, 175);
             this.txtObrazlozenje.Multiline = true;
             this.txtObrazlozenje.Name = "txtObrazlozenje";
             this.txtObrazlozenje.Size = new System.Drawing.Size(312, 82);
@@ -382,7 +390,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVrsta.Enabled = false;
             this.txtVrsta.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVrsta.Location = new System.Drawing.Point(322, 143);
+            this.txtVrsta.Location = new System.Drawing.Point(322, 145);
             this.txtVrsta.Name = "txtVrsta";
             this.txtVrsta.Size = new System.Drawing.Size(312, 23);
             this.txtVrsta.TabIndex = 14;
@@ -391,9 +399,10 @@
             // 
             this.dtpDatumZahjteva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dtpDatumZahjteva.Enabled = false;
+            this.dtpDatumZahjteva.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDatumZahjteva.Location = new System.Drawing.Point(378, 116);
             this.dtpDatumZahjteva.Name = "dtpDatumZahjteva";
-            this.dtpDatumZahjteva.Size = new System.Drawing.Size(200, 20);
+            this.dtpDatumZahjteva.Size = new System.Drawing.Size(200, 22);
             this.dtpDatumZahjteva.TabIndex = 16;
             // 
             // txtZahtjev
@@ -416,7 +425,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 170);
+            this.label3.Location = new System.Drawing.Point(1, 172);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(317, 88);
@@ -432,7 +441,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIzvor.Enabled = false;
             this.txtIzvor.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIzvor.Location = new System.Drawing.Point(322, 292);
+            this.txtIzvor.Location = new System.Drawing.Point(322, 294);
             this.txtIzvor.Multiline = true;
             this.txtIzvor.Name = "txtIzvor";
             this.txtIzvor.Size = new System.Drawing.Size(312, 34);
@@ -440,6 +449,8 @@
             // 
             // labelZahtjev
             // 
+            this.labelZahtjev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelZahtjev.ForeColor = System.Drawing.Color.Black;
@@ -488,6 +499,8 @@
             // 
             // btnIzmijeniZahtjev
             // 
+            this.btnIzmijeniZahtjev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIzmijeniZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIzmijeniZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIzmijeniZahtjev.Location = new System.Drawing.Point(404, 554);

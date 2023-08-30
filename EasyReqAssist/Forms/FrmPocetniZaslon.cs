@@ -67,15 +67,12 @@ namespace EasyReqAssist
                     switch (radioBtn.Name)
                     {
                         case "rbTXTFile":
-                            Debug.WriteLine("Odabran rbTXTFile");
                             SpremanjeUTekstualnuDatoteku();
                             break;
                         case "rbCSVFile":
-                            Debug.WriteLine("Odabran rbCSVFile");
                             SpremanjeUCSVDatoteku();
                             break;
                         case "rbPDFFile":
-                            Debug.WriteLine("Odabran rbPDFFile");
                             SpremanjeuPDFDatoteku();
                             break;
                     }
@@ -228,7 +225,7 @@ namespace EasyReqAssist
 
             if(dgvZahtjevi.Rows.Count == 0)
             {
-                MessageBox.Show("Nemate napravljenih zahtjeva!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nemate napravljenih zahtjeva da biste mogli pregledati njihove detalje!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (odabraniZahtjev == null)
             {

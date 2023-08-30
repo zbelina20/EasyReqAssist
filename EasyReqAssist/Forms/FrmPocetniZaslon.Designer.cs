@@ -42,12 +42,16 @@
             this.groupBoxSpremanje = new System.Windows.Forms.GroupBox();
             this.rbCSVFile = new System.Windows.Forms.RadioButton();
             this.rbPDFFile = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.groupBoxSpremanje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -72,6 +76,8 @@
             // 
             // dgvZahtjevi
             // 
+            this.dgvZahtjevi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvZahtjevi.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZahtjevi.Location = new System.Drawing.Point(187, 120);
@@ -126,6 +132,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -139,7 +147,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 617);
+            this.label4.Location = new System.Drawing.Point(8, 616);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(450, 15);
             this.label4.TabIndex = 8;
@@ -195,12 +203,24 @@
             this.rbPDFFile.Text = "PDF datoteka";
             this.rbPDFFile.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 72);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmPocetniZaslon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1266, 710);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxSpremanje);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -218,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).EndInit();
             this.groupBoxSpremanje.ResumeLayout(false);
             this.groupBoxSpremanje.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +259,7 @@
         private System.Windows.Forms.GroupBox groupBoxSpremanje;
         private System.Windows.Forms.RadioButton rbPDFFile;
         private System.Windows.Forms.RadioButton rbCSVFile;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

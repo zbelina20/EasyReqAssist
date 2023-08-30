@@ -166,8 +166,40 @@ prijava u sustav je neuspješna te rad neće biti moguć.</value>
   <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>824, 15</value>
   </metadata>
+  <metadata name="toolTipGumbProvjeriZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1204, 15</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnProvjeriZahtjev.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAABGJJREFUaEPtmU1PU0EUhokfG34ACRs0IC3Slo2JCkb9A27dCFhAQ8AKbWNMTFiw
+        NtGYqAnWn6CUQkFlYfADE6G9oBvwIwE24EIb0ZXggnre6dzkpjn3e4oseJM3abh3znnOnZkzY6za1772
+        sp5cPCi850WQ4YV4ayQfH4poiQx5KZJPbEbyya2S6Tf+hmf0Dt7dE4U1a4N14Vz8NgFutGjJohtjDMYi
+        hgy3e2r52FcT0ZIjLfnENgfnxjQrf0WsjzdqZPjKKjyfaKekBQ7GjxEzrCXaZRr1OqH1Hqb1nKKp3+EA
+        VBixIwvJFHLJtGpUq/VWU/BpLmkljFzIKdP7U+nL7x68buRUMhNYNlyC3TCWk8TwJrFhK7jm7Yzcnjd2
+        qVWq7zZuLRi8tFjRm5mA/8NgkVjOhNNRxSGlyjjsXJ3YOOK5QKp9Z2W8eHd1gn1WbjBJPBvRJYs2j+u7
+        jVsD/sfmL+F7q1n2HaPB5OgCiJsiF0CldfjCr9/C+H1/dYp91+hQbqBNYpoL111usCqXwxuLeLj2nB2j
+        O7IQH5KY5qINk+EGq7AZvO4P31eKrYu32LEw2CSmueilJW6wX9vBL2x8LZ59cxNrnR0P07NliWkuemmT
+        G+zHTuDbpgaLTdmeYiQXZ2PAdK3ZlJgmEh0oucUNLjfaH8C4Z0a7gp8zh4fpQNuy7kQOC0DbAxR8Z9W8
+        CDt4beOLY3jYWQG5hGUBaHdGKLMiXMHP28PDYLMtIPx+0LSAB2vPWChRhGE5OYFvnRpwBQ+DzboAUmg2
+        xm5itLdFanMcEKzPhB183iM8HHoXs9nEpNCrfraNor2doza3SJuOA4MBbgm//tkzPNw802ffRpteXGUP
+        MrQ3JD5D6xadgwO0MuBPT3qHh8EmMc3VOBYdMusI+LuXInIC/roveIwLEpvENFfDWGdr80w/GwQ2FmG1
+        nHTPr38qwU96h4fB1PC0w/4yh10eyHZvWB7pDmcC8KcUwIMFTLYdSFdj+vLt0KtrbDDddkWogofBEiQm
+        iWev+mxnXWCie9susdlymlMIj/FgOTp66YjEc6ZAumvk+HSv5e0QLp+JEnxMDTzlBkNgNPpIYjlXfbqj
+        hooohF5bLyVYLwI9/qQieBi5wQAWieVOx9LR9uBY10549jqbwGi9iKbJK0rgkRO5g8QgcbwpkImmgpku
+        EZBLZDTAlcFTTvr6jyWGD6V6DwfS0Wn6GmJK7faEHyM2ciBXYCw6jdySwp9qsxeq9SLExlbwlcuNmIgt
+        4CkXcsr0iqSJmUiRd4Lj3aI3q5gN8dXR5ylmCZ6Wjer/4DAKGxudAcmCEz3iiMcG5uCsjC+OsYghwQuI
+        LdNUVrLFjtA63RaFkJumrhSbX/YVQ29j+IeHuL3i6wrTb/wNz/AO3tXHIQb6vOdW6Uc4HXHEE8Q3Hcip
+        xRga6/qErYiGqw7gpoireGO6K0NwS7RXftIs/SkZv6PLeIZ3xK1yePiAHL2HNXz+kPC+zFRV9Q8y4tP4
+        F0aYOwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>27, 11</value>
+  </metadata>
+  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>123, 11</value>
   </metadata>
   <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>245, 11</value>
@@ -187,13 +219,12 @@ prijava u sustav je neuspješna te rad neće biti moguć.</value>
   <metadata name="toolTipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>927, 15</value>
   </metadata>
-  <metadata name="toolTipNacinProvjere.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1039, 15</value>
+  <metadata name="toolTipGumbProvjeriZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1204, 15</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>58</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAA47AAAOOwAAAAAAAAAA
