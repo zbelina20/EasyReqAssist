@@ -12,7 +12,7 @@ namespace EasyReqAssist.API
 {
     public class OpenAIChatClient
     {
-        private const string ApiKey = "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";
+        private string ApiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User);
 
         public async Task<string> GetChatResponseV2(string korisnikovZahtjev)
         {
@@ -73,8 +73,7 @@ namespace EasyReqAssist.API
                     else
                     {
                         var errorMessage = $"Neuspješan zahtjev na API sa statusnim kodom: {odgovor.StatusCode}";
-                        return errorMessage;
-                        //return "Neuspješan zahtjev na API!";
+                        return errorMessage + ApiKey;
                     }
                 }
                 catch (Exception ex)

@@ -85,7 +85,7 @@ namespace EasyReqAssist.Forms
             else
             {
                 var chatClient = new OpenAIChatClient();
-                string response = await chatClient.GetChatResponseV2(txtZahtjev.Text);
+                string response = await chatClient.GetChatResponse(txtZahtjev.Text);
                 txtOdgovorAPIa.Text = response;
             }
         }
