@@ -10,5 +10,10 @@ namespace EasyReqAssist.Entities
     {
         public string Naziv { get; set; }
         public List<Zahtjev> ListaZahtjeva { get; set; }
+
+        public Projekt()
+        {
+            ListaZahtjeva = new List<Zahtjev>();
+        }
     }
 }

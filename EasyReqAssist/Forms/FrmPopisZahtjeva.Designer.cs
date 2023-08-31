@@ -218,6 +218,7 @@
             // 
             // cmbProjekti
             // 
+            this.cmbProjekti.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProjekti.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProjekti.FormattingEnabled = true;
             this.cmbProjekti.Location = new System.Drawing.Point(447, 80);

@@ -57,17 +57,17 @@ namespace EasyReqAssist.Forms
 
         private int RedniBrojZahtjeva()
         {
-            if(PopisZahtjeva.Projekt.ListaZahtjeva.Count == 0)
+            if(PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count == 0 || PopisZahtjeva.OdabraniProjekt.ListaZahtjeva == null)
             {
                 return 1;
             }
-            else if(PopisZahtjeva.Projekt.ListaZahtjeva.Count != PopisZahtjeva.Projekt.ListaZahtjeva.LastOrDefault().RedniBroj)
+            else if(PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count != PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.LastOrDefault().RedniBroj)
             {
-                return PopisZahtjeva.Projekt.ListaZahtjeva.Count - 1;
+                return PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count - 1;
             }
             else
             {
-                return PopisZahtjeva.Projekt.ListaZahtjeva.Count + 1;
+                return PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count + 1;
             }
         }
 

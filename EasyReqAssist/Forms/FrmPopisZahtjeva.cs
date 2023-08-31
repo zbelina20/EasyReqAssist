@@ -19,21 +19,25 @@ namespace EasyReqAssist
     public partial class FrmPopisZahtjeva : Form
     {
         private Zahtjev odabraniZahtjev = new Zahtjev();
-        public Projekt Projekt = new Projekt();
-        public List<Projekt> ListaProjekta = new List<Projekt>();
+        public List<Projekt> ListaProjekata = new List<Projekt>();
+        public Projekt OdabraniProjekt = new Projekt();
+
         public FrmPopisZahtjeva(string nazivProjekta)
         {
             InitializeComponent();
+            Projekt Projekt = new Projekt();
             Projekt.Naziv = nazivProjekta;
-            ListaProjekta.Add(Projekt);
-            OsvjeziComboBoxProjekta();
+            OdabraniProjekt = Projekt;
+            ListaProjekata.Add(Projekt);
+            OsvjeziComboBoxProjekata();
         }
 
-        public void OsvjeziComboBoxProjekta()
+        public void OsvjeziComboBoxProjekata()
         {
             cmbProjekti.DataSource = null;
-            cmbProjekti.DataSource = ListaProjekta;
+            cmbProjekti.DataSource = ListaProjekata;
             cmbProjekti.DisplayMember = "Naziv";
+            cmbProjekti.SelectedIndexChanged += cmbProjekti_SelectedIndexChanged;
         }
 
         private void btnNoviZahtjev_Click(object sender, EventArgs e)
@@ -44,28 +48,31 @@ namespace EasyReqAssist
 
         public void UcitajNoviZahtjev(Zahtjev zahtjev)
         {
-            Projekt.ListaZahtjeva.Add(zahtjev);
+            OdabraniProjekt.ListaZahtjeva.Add(zahtjev);
             OsvjeziPopisZahtjeva();
         }
 
         private void OsvjeziPopisZahtjeva()
         {
-            dgvZahtjevi.DataSource = null;
-            Projekt.ListaZahtjeva = Projekt.ListaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
-            dgvZahtjevi.DataSource = Projekt.ListaZahtjeva;
-            dgvZahtjevi.Refresh();
+            if (OdabraniProjekt.ListaZahtjeva != null)
+            {
+                dgvZahtjevi.DataSource = null;
+                OdabraniProjekt.ListaZahtjeva = OdabraniProjekt.ListaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
+                dgvZahtjevi.DataSource = OdabraniProjekt.ListaZahtjeva;
+                dgvZahtjevi.Refresh();
+            }
         }
 
         public void IzmijeniPostojeciZahtjev(Zahtjev izmijenjeniZahtjev)
         {
-            int index = Projekt.ListaZahtjeva.FindIndex(z => z.RedniBroj == odabraniZahtjev.RedniBroj);
-            Projekt.ListaZahtjeva[index] = izmijenjeniZahtjev;
+            int index = OdabraniProjekt.ListaZahtjeva.FindIndex(z => z.RedniBroj == odabraniZahtjev.RedniBroj);
+            OdabraniProjekt.ListaZahtjeva[index] = izmijenjeniZahtjev;
             OsvjeziPopisZahtjeva();
         }
 
         private void btnSpremiUDatoteku_Click(object sender, EventArgs e)
         {
-            if (Projekt.ListaZahtjeva.Count == 0)
+            if (OdabraniProjekt.ListaZahtjeva.Count == 0)
             {
                 MessageBox.Show("Nemate zahtjeva za spremiti!", "Spremanje prekinuto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -101,7 +108,7 @@ namespace EasyReqAssist
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                SpremiZahtjeveUTxtDatoteku(saveDialog.FileName, Projekt.ListaZahtjeva);
+                SpremiZahtjeveUTxtDatoteku(saveDialog.FileName, OdabraniProjekt.ListaZahtjeva);
                 MessageBox.Show("Zahtjevi su uspješno spremljeni u tekstualnu datoteku!", "Spremanje završeno", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -110,7 +117,7 @@ namespace EasyReqAssist
         {
             using (StreamWriter writer = new StreamWriter(nazivDatoteke))
             {
-                writer.WriteLine("Projekt: " + Projekt.Naziv);
+                writer.WriteLine("Projekt: " + OdabraniProjekt.Naziv);
                 writer.WriteLine();
                 foreach (Zahtjev zahtjev in listaZahtjeva)
                 {
@@ -144,7 +151,7 @@ namespace EasyReqAssist
         {
             StringBuilder csvSadrzaj = new StringBuilder();
 
-            csvSadrzaj.AppendLine("Projekt: " + Projekt.Naziv);
+            csvSadrzaj.AppendLine("Projekt: " + OdabraniProjekt.Naziv);
             csvSadrzaj.AppendLine();
 
             // Dodajte zaglavlje CSV datoteke (nazive stupaca DataGridView-a)
@@ -202,7 +209,7 @@ namespace EasyReqAssist
             // Otvaranje PDF-a za pisanje
             pdfDokument.Open();
 
-            pdfDokument.AddHeader("Projekt: ", Projekt.Naziv);
+            pdfDokument.Add(new Paragraph("Projekt: " + OdabraniProjekt.Naziv));
             pdfDokument.Add(new Paragraph(" "));
 
             // Dodavanje zaglavlja tablice iz naziva stupaca u DataGridView
@@ -280,15 +287,22 @@ namespace EasyReqAssist
             }
             else
             {
-                Projekt.ListaZahtjeva.Remove(odabraniZahtjev);
+                OdabraniProjekt.ListaZahtjeva.Remove(odabraniZahtjev);
                 OsvjeziPopisZahtjeva();
             }
         }
 
         private void btnNoviProjekt_Click(object sender, EventArgs e)
         {
+            cmbProjekti.SelectedIndexChanged -= cmbProjekti_SelectedIndexChanged;
             FrmNoviProjekt frmNoviProjekt = new FrmNoviProjekt(this);
             frmNoviProjekt.ShowDialog();
+        }
+        
+        private void cmbProjekti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OdabraniProjekt = cmbProjekti.SelectedItem as Projekt;
+            OsvjeziPopisZahtjeva();
         }
     }
 

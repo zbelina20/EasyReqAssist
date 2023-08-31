@@ -26,8 +26,8 @@ namespace EasyReqAssist.Forms
             {
                 Projekt noviProjekt = new Projekt();
                 noviProjekt.Naziv = txtProjekt.Text;
-                PopisZahtjeva.ListaProjekta.Add(noviProjekt);
-                PopisZahtjeva.OsvjeziComboBoxProjekta();
+                PopisZahtjeva.ListaProjekata.Add(noviProjekt);
+                PopisZahtjeva.OsvjeziComboBoxProjekata();
                 Close();
             }
             else
