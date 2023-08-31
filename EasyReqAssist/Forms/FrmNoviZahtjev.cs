@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -84,9 +85,16 @@ namespace EasyReqAssist.Forms
             }
             else
             {
+                txtOdgovorAPIa.Clear();
                 var chatClient = new OpenAIChatClient();
-                string response = await chatClient.GetChatResponseV2(txtZahtjev.Text);
-                txtOdgovorAPIa.Text = response;
+                string odgovor = await chatClient.GetChatResponse(txtZahtjev.Text);
+                var jsonOdgovor = JsonSerializer.Deserialize<JsonElement>(odgovor);
+                var AIOdgovor = jsonOdgovor
+                    .GetProperty("choices")[0]
+                    .GetProperty("message")
+                    .GetProperty("content")
+                    .GetString();
+                txtOdgovorAPIa.Text = AIOdgovor;
             }
         }
     }
