@@ -15,11 +15,11 @@ namespace EasyReqAssist.Forms
 {
     public partial class FrmNoviZahtjev : Form
     {
-        private FrmPocetniZaslon pocetniZaslon;
-        public FrmNoviZahtjev(FrmPocetniZaslon frmPocetniZaslon)
+        private FrmPopisZahtjeva PopisZahtjeva;
+        public FrmNoviZahtjev(FrmPopisZahtjeva frmPopisZahtjeva)
         {
             InitializeComponent();
-            pocetniZaslon = frmPocetniZaslon;
+            PopisZahtjeva = frmPopisZahtjeva;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -50,24 +50,24 @@ namespace EasyReqAssist.Forms
                     NacinProvjere = txtNacinProvjere.Text
                 };
 
-                pocetniZaslon.UcitajNoviZahtjev(noviZahtjev);
+                PopisZahtjeva.UcitajNoviZahtjev(noviZahtjev);
                 Close();
             }
         }
 
         private int RedniBrojZahtjeva()
         {
-            if(pocetniZaslon.listaZahtjeva.Count == 0)
+            if(PopisZahtjeva.Projekt.ListaZahtjeva.Count == 0)
             {
                 return 1;
             }
-            else if(pocetniZaslon.listaZahtjeva.Count != pocetniZaslon.listaZahtjeva.LastOrDefault().RedniBroj)
+            else if(PopisZahtjeva.Projekt.ListaZahtjeva.Count != PopisZahtjeva.Projekt.ListaZahtjeva.LastOrDefault().RedniBroj)
             {
-                return pocetniZaslon.listaZahtjeva.Count - 1;
+                return PopisZahtjeva.Projekt.ListaZahtjeva.Count - 1;
             }
             else
             {
-                return pocetniZaslon.listaZahtjeva.Count + 1;
+                return PopisZahtjeva.Projekt.ListaZahtjeva.Count + 1;
             }
         }
 
@@ -85,7 +85,7 @@ namespace EasyReqAssist.Forms
             else
             {
                 var chatClient = new OpenAIChatClient();
-                string response = await chatClient.GetChatResponse(txtZahtjev.Text);
+                string response = await chatClient.GetChatResponseV2(txtZahtjev.Text);
                 txtOdgovorAPIa.Text = response;
             }
         }

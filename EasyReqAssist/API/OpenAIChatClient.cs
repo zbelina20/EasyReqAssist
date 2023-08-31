@@ -12,7 +12,7 @@ namespace EasyReqAssist.API
 {
     public class OpenAIChatClient
     {
-        private string ApiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User);
+        private readonly string ApiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User);
 
         public async Task<string> GetChatResponseV2(string korisnikovZahtjev)
         {
@@ -20,7 +20,7 @@ namespace EasyReqAssist.API
 
             var chat = api.Chat.CreateConversation();
 
-            chat.AppendSystemMessage("Vi ste iskusni mentor sistemskog inženjeringa specijaliziran za softverske zahtjeve. Vaš cilj je pružiti točne smjernice i pomoći studentu da napiše sveobuhvatne i usklađene softverske zahtjeve slijedeći INCOSE smjernice.");
+            chat.AppendSystemMessage("Vi ste iskusni mentor sistemskog inženjeringa specijaliziran za softverske zahtjeve. Vaš cilj je pružiti točne te što kraće smjernice i pomoći studentu da napiše sveobuhvatne i usklađene softverske zahtjeve slijedeći INCOSE smjernice.");
 
             chat.AppendUserInput("Molim provjeri mi ovaj zahtjev: " + korisnikovZahtjev);
 
@@ -73,7 +73,7 @@ namespace EasyReqAssist.API
                     else
                     {
                         var errorMessage = $"Neuspješan zahtjev na API sa statusnim kodom: {odgovor.StatusCode}";
-                        return errorMessage + ApiKey;
+                        return errorMessage;
                     }
                 }
                 catch (Exception ex)

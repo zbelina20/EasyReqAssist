@@ -14,8 +14,8 @@ namespace EasyReqAssist.Forms
     public partial class FrmDetaljiZahtjeva : Form
     {
         private Zahtjev OdabraniZahtjev = new Zahtjev();
-        private FrmPocetniZaslon PocetniZaslon;
-        public FrmDetaljiZahtjeva(Zahtjev odabraniZahtjev, FrmPocetniZaslon pocetniZaslon)
+        private FrmPopisZahtjeva PocetniZaslon;
+        public FrmDetaljiZahtjeva(Zahtjev odabraniZahtjev, FrmPopisZahtjeva pocetniZaslon)
         {
             InitializeComponent();
             OdabraniZahtjev = odabraniZahtjev;

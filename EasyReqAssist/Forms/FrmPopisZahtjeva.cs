@@ -16,13 +16,24 @@ using System.Diagnostics;
 
 namespace EasyReqAssist
 {
-    public partial class FrmPocetniZaslon : Form
+    public partial class FrmPopisZahtjeva : Form
     {
-        public List<Zahtjev> listaZahtjeva = new List<Zahtjev>();
         private Zahtjev odabraniZahtjev = new Zahtjev();
-        public FrmPocetniZaslon()
+        public Projekt Projekt = new Projekt();
+        public List<Projekt> ListaProjekta = new List<Projekt>();
+        public FrmPopisZahtjeva(string nazivProjekta)
         {
             InitializeComponent();
+            Projekt.Naziv = nazivProjekta;
+            ListaProjekta.Add(Projekt);
+            OsvjeziComboBoxProjekta();
+        }
+
+        public void OsvjeziComboBoxProjekta()
+        {
+            cmbProjekti.DataSource = null;
+            cmbProjekti.DataSource = ListaProjekta;
+            cmbProjekti.DisplayMember = "Naziv";
         }
 
         private void btnNoviZahtjev_Click(object sender, EventArgs e)
@@ -33,28 +44,28 @@ namespace EasyReqAssist
 
         public void UcitajNoviZahtjev(Zahtjev zahtjev)
         {
-            listaZahtjeva.Add(zahtjev);
+            Projekt.ListaZahtjeva.Add(zahtjev);
             OsvjeziPopisZahtjeva();
         }
 
         private void OsvjeziPopisZahtjeva()
         {
             dgvZahtjevi.DataSource = null;
-            listaZahtjeva = listaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
-            dgvZahtjevi.DataSource = listaZahtjeva;
+            Projekt.ListaZahtjeva = Projekt.ListaZahtjeva.OrderBy(z => z.RedniBroj).ToList();
+            dgvZahtjevi.DataSource = Projekt.ListaZahtjeva;
             dgvZahtjevi.Refresh();
         }
 
         public void IzmijeniPostojeciZahtjev(Zahtjev izmijenjeniZahtjev)
         {
-            int index = listaZahtjeva.FindIndex(z => z.RedniBroj == odabraniZahtjev.RedniBroj);
-            listaZahtjeva[index] = izmijenjeniZahtjev;
+            int index = Projekt.ListaZahtjeva.FindIndex(z => z.RedniBroj == odabraniZahtjev.RedniBroj);
+            Projekt.ListaZahtjeva[index] = izmijenjeniZahtjev;
             OsvjeziPopisZahtjeva();
         }
 
         private void btnSpremiUDatoteku_Click(object sender, EventArgs e)
         {
-            if (listaZahtjeva.Count == 0)
+            if (Projekt.ListaZahtjeva.Count == 0)
             {
                 MessageBox.Show("Nemate zahtjeva za spremiti!", "Spremanje prekinuto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -90,7 +101,7 @@ namespace EasyReqAssist
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                SpremiZahtjeveUTxtDatoteku(saveDialog.FileName, listaZahtjeva);
+                SpremiZahtjeveUTxtDatoteku(saveDialog.FileName, Projekt.ListaZahtjeva);
                 MessageBox.Show("Zahtjevi su uspješno spremljeni u tekstualnu datoteku!", "Spremanje završeno", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -99,6 +110,8 @@ namespace EasyReqAssist
         {
             using (StreamWriter writer = new StreamWriter(nazivDatoteke))
             {
+                writer.WriteLine("Projekt: " + Projekt.Naziv);
+                writer.WriteLine();
                 foreach (Zahtjev zahtjev in listaZahtjeva)
                 {
                     writer.WriteLine("Identifikator: " + zahtjev.Identifikator);
@@ -130,6 +143,9 @@ namespace EasyReqAssist
         private void SpremiZahtjeveUCSVDatoteku(string nazivDatoteke)
         {
             StringBuilder csvSadrzaj = new StringBuilder();
+
+            csvSadrzaj.AppendLine("Projekt: " + Projekt.Naziv);
+            csvSadrzaj.AppendLine();
 
             // Dodajte zaglavlje CSV datoteke (nazive stupaca DataGridView-a)
             for (int i = 0; i < dgvZahtjevi.Columns.Count; i++)
@@ -185,6 +201,9 @@ namespace EasyReqAssist
 
             // Otvaranje PDF-a za pisanje
             pdfDokument.Open();
+
+            pdfDokument.AddHeader("Projekt: ", Projekt.Naziv);
+            pdfDokument.Add(new Paragraph(" "));
 
             // Dodavanje zaglavlja tablice iz naziva stupaca u DataGridView
             for (int i = 0; i < dgvZahtjevi.Rows.Count; i++)
@@ -261,9 +280,15 @@ namespace EasyReqAssist
             }
             else
             {
-                listaZahtjeva.Remove(odabraniZahtjev);
+                Projekt.ListaZahtjeva.Remove(odabraniZahtjev);
                 OsvjeziPopisZahtjeva();
             }
+        }
+
+        private void btnNoviProjekt_Click(object sender, EventArgs e)
+        {
+            FrmNoviProjekt frmNoviProjekt = new FrmNoviProjekt(this);
+            frmNoviProjekt.ShowDialog();
         }
     }
 

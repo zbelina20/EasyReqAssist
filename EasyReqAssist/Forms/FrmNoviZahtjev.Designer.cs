@@ -131,7 +131,7 @@
             this.labelZahtjev.ForeColor = System.Drawing.Color.Black;
             this.labelZahtjev.Location = new System.Drawing.Point(-8, 9);
             this.labelZahtjev.Name = "labelZahtjev";
-            this.labelZahtjev.Size = new System.Drawing.Size(1033, 49);
+            this.labelZahtjev.Size = new System.Drawing.Size(1112, 49);
             this.labelZahtjev.TabIndex = 8;
             this.labelZahtjev.Text = "Zahtjev";
             this.labelZahtjev.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -443,7 +443,7 @@
             this.btnSpremiZahtjev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSpremiZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSpremiZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpremiZahtjev.Location = new System.Drawing.Point(753, 552);
+            this.btnSpremiZahtjev.Location = new System.Drawing.Point(502, 552);
             this.btnSpremiZahtjev.Name = "btnSpremiZahtjev";
             this.btnSpremiZahtjev.Size = new System.Drawing.Size(100, 55);
             this.btnSpremiZahtjev.TabIndex = 10;
@@ -456,7 +456,7 @@
             this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOdustani.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdustani.Location = new System.Drawing.Point(859, 552);
+            this.btnOdustani.Location = new System.Drawing.Point(608, 552);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(100, 55);
             this.btnOdustani.TabIndex = 11;
@@ -518,20 +518,19 @@
             // 
             // txtOdgovorAPIa
             // 
-            this.txtOdgovorAPIa.Location = new System.Drawing.Point(742, 147);
+            this.txtOdgovorAPIa.Location = new System.Drawing.Point(742, 89);
             this.txtOdgovorAPIa.Multiline = true;
             this.txtOdgovorAPIa.Name = "txtOdgovorAPIa";
             this.txtOdgovorAPIa.ReadOnly = true;
-            this.txtOdgovorAPIa.Size = new System.Drawing.Size(271, 398);
+            this.txtOdgovorAPIa.Size = new System.Drawing.Size(350, 456);
             this.txtOdgovorAPIa.TabIndex = 13;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(742, 117);
+            this.label5.Location = new System.Drawing.Point(738, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 24);
+            this.label5.Size = new System.Drawing.Size(173, 31);
             this.label5.TabIndex = 14;
             this.label5.Text = "Provjera zahtjeva:";
             // 
@@ -540,7 +539,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1025, 612);
+            this.ClientSize = new System.Drawing.Size(1104, 612);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtOdgovorAPIa);
             this.Controls.Add(this.label13);

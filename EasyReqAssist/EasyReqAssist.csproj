@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\OpenAIChatClient.cs" />
+    <Compile Include="Entities\Projekt.cs" />
     <Compile Include="Entities\Zahtjev.cs" />
     <Compile Include="Forms\FrmDetaljiZahtjeva.cs">
       <SubType>Form</SubType>
@@ -113,11 +114,23 @@
     <Compile Include="Forms\FrmDetaljiZahtjeva.Designer.cs">
       <DependentUpon>FrmDetaljiZahtjeva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPocetniZaslon.cs">
+    <Compile Include="Forms\FrmNoviProjekt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmPocetniZaslon.Designer.cs">
-      <DependentUpon>FrmPocetniZaslon.cs</DependentUpon>
+    <Compile Include="Forms\FrmNoviProjekt.Designer.cs">
+      <DependentUpon>FrmNoviProjekt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNoviProjektPocetno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNoviProjektPocetno.Designer.cs">
+      <DependentUpon>FrmNoviProjektPocetno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopisZahtjeva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopisZahtjeva.Designer.cs">
+      <DependentUpon>FrmPopisZahtjeva.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmNoviZahtjev.cs">
       <SubType>Form</SubType>
@@ -130,11 +143,17 @@
     <EmbeddedResource Include="Forms\FrmDetaljiZahtjeva.resx">
       <DependentUpon>FrmDetaljiZahtjeva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNoviProjekt.resx">
+      <DependentUpon>FrmNoviProjekt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNoviProjektPocetno.resx">
+      <DependentUpon>FrmNoviProjektPocetno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNoviZahtjev.resx">
       <DependentUpon>FrmNoviZahtjev.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPocetniZaslon.resx">
-      <DependentUpon>FrmPocetniZaslon.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmPopisZahtjeva.resx">
+      <DependentUpon>FrmPopisZahtjeva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

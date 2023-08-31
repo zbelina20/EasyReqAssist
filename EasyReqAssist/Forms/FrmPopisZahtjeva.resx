@@ -117,114 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>27, 11</value>
-  </metadata>
-  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>123, 11</value>
-  </metadata>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value>Sam zahtjev kojeg bi sustav trebao realizirati. 
-Izbjegavajte pisanje zahtjeva kao što su „Sustav će biti dizajniran da može…“ ili
-„Sustav će biti dizajniran da bude sposoban za…“, umjesto „Sustav će…“. 
-Npr.  "Sustav će omogućiti prijavu korisnika."</value>
-  </data>
-  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>555, 14</value>
-  </metadata>
-  <data name="label3.ToolTip" xml:space="preserve">
-    <value>Obrazloženje postojanja i potrebe napisanog zahtjeva.
-Npr. "Korisnik će se morati prijaviti kako bi pristupio aplikaciji 
-te se pri svakom unosom provjeravaju uneseni podatci. 
-Svaki korisnik ima svoje jedinstveno korisničko ime i lozinku."
-</value>
-  </data>
-  <metadata name="toolTipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>927, 15</value>
-  </metadata>
-  <metadata name="toolTipPrioritet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>703, 14</value>
-  </metadata>
-  <metadata name="toolTipNacinProvjere.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1039, 15</value>
-  </metadata>
-  <data name="label4.ToolTip" xml:space="preserve">
-    <value>Postupak koji se provodi unutar aplikacije kako bi
-se saznalo je li zahtjev ispunjen ili ne. Može biti
-testni scenarij ili kriterij provjere.
-Npr. Upisom ispravnih korisničkih podataka
-korisnik treba biti uspješno prijavljen u sustav i 
-spreman za rad. Ukoliko su podaci neispravni, 
-prijava u sustav je neuspješna te rad neće biti moguć.</value>
-  </data>
-  <metadata name="toolTipVrstaZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 14</value>
-  </metadata>
-  <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 11</value>
-  </metadata>
-  <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>824, 15</value>
-  </metadata>
-  <metadata name="toolTipGumbProvjeriZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1204, 15</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnProvjeriZahtjev.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAABGJJREFUaEPtmU1PU0EUhokfG34ACRs0IC3Slo2JCkb9A27dCFhAQ8AKbWNMTFiw
-        NtGYqAnWn6CUQkFlYfADE6G9oBvwIwE24EIb0ZXggnre6dzkpjn3e4oseJM3abh3znnOnZkzY6za1772
-        sp5cPCi850WQ4YV4ayQfH4poiQx5KZJPbEbyya2S6Tf+hmf0Dt7dE4U1a4N14Vz8NgFutGjJohtjDMYi
-        hgy3e2r52FcT0ZIjLfnENgfnxjQrf0WsjzdqZPjKKjyfaKekBQ7GjxEzrCXaZRr1OqH1Hqb1nKKp3+EA
-        VBixIwvJFHLJtGpUq/VWU/BpLmkljFzIKdP7U+nL7x68buRUMhNYNlyC3TCWk8TwJrFhK7jm7Yzcnjd2
-        qVWq7zZuLRi8tFjRm5mA/8NgkVjOhNNRxSGlyjjsXJ3YOOK5QKp9Z2W8eHd1gn1WbjBJPBvRJYs2j+u7
-        jVsD/sfmL+F7q1n2HaPB5OgCiJsiF0CldfjCr9/C+H1/dYp91+hQbqBNYpoL111usCqXwxuLeLj2nB2j
-        O7IQH5KY5qINk+EGq7AZvO4P31eKrYu32LEw2CSmueilJW6wX9vBL2x8LZ59cxNrnR0P07NliWkuemmT
-        G+zHTuDbpgaLTdmeYiQXZ2PAdK3ZlJgmEh0oucUNLjfaH8C4Z0a7gp8zh4fpQNuy7kQOC0DbAxR8Z9W8
-        CDt4beOLY3jYWQG5hGUBaHdGKLMiXMHP28PDYLMtIPx+0LSAB2vPWChRhGE5OYFvnRpwBQ+DzboAUmg2
-        xm5itLdFanMcEKzPhB183iM8HHoXs9nEpNCrfraNor2doza3SJuOA4MBbgm//tkzPNw802ffRpteXGUP
-        MrQ3JD5D6xadgwO0MuBPT3qHh8EmMc3VOBYdMusI+LuXInIC/roveIwLEpvENFfDWGdr80w/GwQ2FmG1
-        nHTPr38qwU96h4fB1PC0w/4yh10eyHZvWB7pDmcC8KcUwIMFTLYdSFdj+vLt0KtrbDDddkWogofBEiQm
-        iWev+mxnXWCie9susdlymlMIj/FgOTp66YjEc6ZAumvk+HSv5e0QLp+JEnxMDTzlBkNgNPpIYjlXfbqj
-        hooohF5bLyVYLwI9/qQieBi5wQAWieVOx9LR9uBY10549jqbwGi9iKbJK0rgkRO5g8QgcbwpkImmgpku
-        EZBLZDTAlcFTTvr6jyWGD6V6DwfS0Wn6GmJK7faEHyM2ciBXYCw6jdySwp9qsxeq9SLExlbwlcuNmIgt
-        4CkXcsr0iqSJmUiRd4Lj3aI3q5gN8dXR5ylmCZ6Wjer/4DAKGxudAcmCEz3iiMcG5uCsjC+OsYghwQuI
-        LdNUVrLFjtA63RaFkJumrhSbX/YVQ29j+IeHuL3i6wrTb/wNz/AO3tXHIQb6vOdW6Uc4HXHEE8Q3Hcip
-        xRga6/qErYiGqw7gpoireGO6K0NwS7RXftIs/SkZv6PLeIZ3xK1yePiAHL2HNXz+kPC+zFRV9Q8y4tP4
-        F0aYOwAAAABJRU5ErkJggg==
+        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
 </value>
   </data>
-  <metadata name="toolTipID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>27, 11</value>
-  </metadata>
-  <metadata name="toolTipZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>123, 11</value>
-  </metadata>
-  <metadata name="toolTipDatumZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 11</value>
-  </metadata>
-  <metadata name="toolTipVrstaZahtjeva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 14</value>
-  </metadata>
-  <metadata name="toolTipObrazloženje.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>555, 14</value>
-  </metadata>
-  <metadata name="toolTipPrioritet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>703, 14</value>
-  </metadata>
-  <metadata name="toolTipIzvor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>824, 15</value>
-  </metadata>
-  <metadata name="toolTipStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>927, 15</value>
-  </metadata>
-  <metadata name="toolTipGumbProvjeriZahtjev.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1204, 15</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>58</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABAA47AAAOOwAAAAAAAAAA
