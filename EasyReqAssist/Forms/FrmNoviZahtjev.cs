@@ -62,13 +62,19 @@ namespace EasyReqAssist.Forms
             {
                 return 1;
             }
-            else if(PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count != PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.LastOrDefault().RedniBroj)
-            {
-                return PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count - 1;
-            }
             else
             {
-                return PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.Count + 1;
+                var sortiraniRedniBrojevi = PopisZahtjeva.OdabraniProjekt.ListaZahtjeva.OrderBy(z => z.RedniBroj).Select(z => z.RedniBroj).ToList();
+
+                for (int i = 1; i <= sortiraniRedniBrojevi.Count + 1; i++)
+                {
+                    if (!sortiraniRedniBrojevi.Contains(i))
+                    {
+                        return i;
+                    }
+                }
+
+                return sortiraniRedniBrojevi.Count + 1;
             }
         }
 
