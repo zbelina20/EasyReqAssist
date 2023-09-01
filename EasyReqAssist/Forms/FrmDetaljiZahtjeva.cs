@@ -14,12 +14,12 @@ namespace EasyReqAssist.Forms
     public partial class FrmDetaljiZahtjeva : Form
     {
         private Zahtjev OdabraniZahtjev = new Zahtjev();
-        private FrmPopisZahtjeva PocetniZaslon;
-        public FrmDetaljiZahtjeva(Zahtjev odabraniZahtjev, FrmPopisZahtjeva pocetniZaslon)
+        private FrmPopisZahtjeva PopisZahtjeva;
+        public FrmDetaljiZahtjeva(Zahtjev odabraniZahtjev, FrmPopisZahtjeva popisZahtjeva)
         {
             InitializeComponent();
             OdabraniZahtjev = odabraniZahtjev;
-            PocetniZaslon = pocetniZaslon;
+            PopisZahtjeva = popisZahtjeva;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace EasyReqAssist.Forms
                     NacinProvjere = txtNacinProvjere.Text
                 };
                 
-                PocetniZaslon.IzmijeniPostojeciZahtjev(azuriraniZahtjev);
+                PopisZahtjeva.IzmijeniPostojeciZahtjev(azuriraniZahtjev);
                 Close();
             }
         }
