@@ -91,17 +91,35 @@ namespace EasyReqAssist.Forms
             }
             else
             {
-                txtOdgovorAPIa.Clear();
+                OcistiTextBoxeve();
+                
                 var chatClient = new OpenAIChatClient();
-                string odgovor = await chatClient.GetChatResponse(txtZahtjev.Text);
-                var jsonOdgovor = JsonSerializer.Deserialize<JsonElement>(odgovor);
+                string odgovorRecenzija = await chatClient.GetChatRatingResponse(txtZahtjev.Text);
+                string odgovorAlternativa = await chatClient.GetChatAlternativeFormulations(txtZahtjev.Text);
+                string odgovorPovezaniZahtjevi = await chatClient.GetChatRelatedRequirements(txtZahtjev.Text);
+                /*var jsonOdgovor = JsonSerializer.Deserialize<JsonElement>(odgovor);
                 var AIOdgovor = jsonOdgovor
                     .GetProperty("choices")[0]
                     .GetProperty("message")
                     .GetProperty("content")
-                    .GetString();
-                txtOdgovorAPIa.Text = AIOdgovor;
+                    .GetString(); */
+
+                DodajOdgovoreUTextBoxeve(odgovorRecenzija, odgovorAlternativa, odgovorPovezaniZahtjevi);
             }
+        }
+
+        private void DodajOdgovoreUTextBoxeve(string odgovorRecenzija, string odgovorAlternativa, string odgovorPovezaniZahtjevi)
+        {
+            txtOdgovorAPIa.Text = odgovorRecenzija;
+            txtAlternative.Text = odgovorAlternativa;
+            txtPovezaniZahtjevi.Text = odgovorPovezaniZahtjevi;
+        }
+
+        private void OcistiTextBoxeve()
+        {
+            txtOdgovorAPIa.Clear();
+            txtAlternative.Clear();
+            txtPovezaniZahtjevi.Clear();
         }
     }
 }

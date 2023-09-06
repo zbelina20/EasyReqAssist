@@ -68,6 +68,10 @@
             this.toolTipGumbProvjeriZahtjev = new System.Windows.Forms.ToolTip(this.components);
             this.txtOdgovorAPIa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtAlternative = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtPovezaniZahtjevi = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +135,7 @@
             this.labelZahtjev.ForeColor = System.Drawing.Color.Black;
             this.labelZahtjev.Location = new System.Drawing.Point(-8, 9);
             this.labelZahtjev.Name = "labelZahtjev";
-            this.labelZahtjev.Size = new System.Drawing.Size(1112, 49);
+            this.labelZahtjev.Size = new System.Drawing.Size(1293, 49);
             this.labelZahtjev.TabIndex = 8;
             this.labelZahtjev.Text = "Zahtjev";
             this.labelZahtjev.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -443,7 +447,7 @@
             this.btnSpremiZahtjev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSpremiZahtjev.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSpremiZahtjev.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpremiZahtjev.Location = new System.Drawing.Point(502, 552);
+            this.btnSpremiZahtjev.Location = new System.Drawing.Point(505, 552);
             this.btnSpremiZahtjev.Name = "btnSpremiZahtjev";
             this.btnSpremiZahtjev.Size = new System.Drawing.Size(100, 55);
             this.btnSpremiZahtjev.TabIndex = 10;
@@ -456,7 +460,7 @@
             this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdustani.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOdustani.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdustani.Location = new System.Drawing.Point(608, 552);
+            this.btnOdustani.Location = new System.Drawing.Point(611, 552);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(100, 55);
             this.btnOdustani.TabIndex = 11;
@@ -522,7 +526,7 @@
             this.txtOdgovorAPIa.Multiline = true;
             this.txtOdgovorAPIa.Name = "txtOdgovorAPIa";
             this.txtOdgovorAPIa.ReadOnly = true;
-            this.txtOdgovorAPIa.Size = new System.Drawing.Size(350, 456);
+            this.txtOdgovorAPIa.Size = new System.Drawing.Size(286, 456);
             this.txtOdgovorAPIa.TabIndex = 13;
             // 
             // label5
@@ -534,12 +538,52 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Provjera zahtjeva:";
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(1030, 58);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(197, 31);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Alternativne formulacije:";
+            // 
+            // txtAlternative
+            // 
+            this.txtAlternative.Location = new System.Drawing.Point(1034, 89);
+            this.txtAlternative.Multiline = true;
+            this.txtAlternative.Name = "txtAlternative";
+            this.txtAlternative.ReadOnly = true;
+            this.txtAlternative.Size = new System.Drawing.Size(193, 149);
+            this.txtAlternative.TabIndex = 15;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1030, 241);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(197, 31);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Povezani zahtjevi:";
+            // 
+            // txtPovezaniZahtjevi
+            // 
+            this.txtPovezaniZahtjevi.Location = new System.Drawing.Point(1034, 275);
+            this.txtPovezaniZahtjevi.Multiline = true;
+            this.txtPovezaniZahtjevi.Name = "txtPovezaniZahtjevi";
+            this.txtPovezaniZahtjevi.ReadOnly = true;
+            this.txtPovezaniZahtjevi.Size = new System.Drawing.Size(193, 271);
+            this.txtPovezaniZahtjevi.TabIndex = 17;
+            // 
             // FrmNoviZahtjev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1104, 612);
+            this.ClientSize = new System.Drawing.Size(1285, 612);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtPovezaniZahtjevi);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtAlternative);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtOdgovorAPIa);
             this.Controls.Add(this.label13);
@@ -599,5 +643,9 @@
         private System.Windows.Forms.ToolTip toolTipGumbProvjeriZahtjev;
         private System.Windows.Forms.TextBox txtOdgovorAPIa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtAlternative;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtPovezaniZahtjevi;
     }
 }
